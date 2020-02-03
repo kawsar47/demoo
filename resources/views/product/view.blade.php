@@ -6,9 +6,9 @@
     <div class="container">
         <div class="row">
             <div class="col-8">
-                <div class="card">
+                <div class="card mb-5">
                     <div class="card-header bg-success">
-                        Product List
+                       List  Product
                     </div>
 
                     <div class="card-body">
@@ -28,8 +28,8 @@
                                     <th>Product Name</th>
                                     <th>Product Description</th>
                                     <th>Product Price</th>
-                                    <th>Alert  Quantity</th>
                                     <th>Product Quantity</th>
+                                    <th>Alert  Quantity</th>
                                     <th colspan="2">Action</th>
                                 </tr>
                                 </thead>
@@ -41,31 +41,105 @@
                                        <td>{{ $product->product_name }}</td>
                                        <td>{{ $product->product_description }}</td>
                                        <td>{{ $product->product_price }}</td>
-                                       <td>{{ $product->alert_quantity }}</td>
                                        <td>{{ $product->product_quantity }}</td>
+                                       <td>{{ $product->alert_quantity }}</td>
                                        <td>
                                            <div class="btn-group" role="group">
 
-{{--                                               <a href="{{ url('delete/product') }}/{{ $product->id }}" class="btn btn-sm btn-danger">Delete</a>--}}
-                                               <button class="btn btn-danger"  data-toggle="modal"   data-target="#delete_{{$product->id}}">Delete</button>
-                                               <a href="{{ url('edit/product') }}/{{ $product->id }}" class="btn btn-sm btn-info">Edit</a>
+                                              <a href="{{ url('delete/product') }}/{{ $product->id }}" class="btn btn-sm btn-danger">Delete</a>
+                                               {{--      <button class="btn btn-danger"  data-toggle="modal"   data-target="#delete_{{$product->id}}">Delete</button>  --}}
+                                                          <a href="{{ url('edit/product') }}/{{ $product->id }}" class="btn btn-sm btn-info">Edit</a>
 
-                                           </div>
+                                                      </div>
 
-                                       </td>
+                                                  </td>
 
-                                   </tr>
-                                   <!-- Modal -->
-                                   <!-- Modal -->
+                                              </tr>
+                                              <!-- Modal -->
+                                              <!-- Modal -->
 
-                                   @empty
-                                   <tr class="text-center text-danger">
-                                       <td colspan="6">No Data Found</td>
-                                   </tr>
+                                              @empty
+                                              <tr class="text-center text-danger">
+                                                  <td colspan="6">No Data Found</td>
+                                              </tr>
 
 
 
-                               @endforelse
+                                          @endforelse
+
+
+                                           </tbody>
+                                       </table>
+                                       {{$products->links() }}
+
+                                   </table>
+                               </div>
+                           </div>
+
+                           <div class="card">
+                               <div class="card-header bg-danger">
+                                   Delete  Product
+                               </div>
+
+                               <div class="card-body">
+{{--                                   @if(session('deletestatus'))
+                                        <div class="alert alert-danger">
+                                            {{ session('deletestatus') }}
+                                        </div>
+                                  @endif --}}
+
+
+
+                                   <table class="table">
+                                       <table class="table table-bordered">
+                                           <thead>
+                                           <tr>
+                                               <th>SL. NO</th>
+                                               <th>Product Name</th>
+                                               <th>Product Description</th>
+                                               <th>Product Price</th>
+                                               <th>Product Quantity</th>
+                                               <th>Alert  Quantity</th>
+                                               <th colspan="2">Action</th>
+
+                                           </tr>
+                                           </thead>
+                                           <tbody>
+
+                                           @forelse ( $deleted_products as $deleted_product)
+                                               <tr>
+                                                   <td>{{ $loop->index+1 }}</td>
+                                                   <td>{{$deleted_product->product_name }}</td>
+                                                   <td>{{ $deleted_product->product_description }}</td>
+                                                   <td>{{ $deleted_product->product_price }}</td>
+                                                   <td>{{ $deleted_product->alert_quantity }}</td>
+                                                   <td>{{ $deleted_product->product_quantity }}</td>
+                                                   <td>
+                                                       <div class="btn-group" role="group">
+
+
+                                                           <a href="{{ url('restor/product') }}/{{ $deleted_product->id }}" class="btn btn-sm btn-success">Restor</a>
+                                                           <a href="{{ url('force/delete/product') }}/{{ $deleted_product->id }}" class="btn btn-sm btn-danger">Permanent Delete</a>
+
+                                                         {{--
+                                                           <button class="btn btn-danger"  data-toggle="modal"   data-target="#delete_{{$product->id}}">Restor</button>
+                                                           <a href="{{ url('edit/product') }}/{{ $product->id }}" class="btn btn-sm btn-info">Edit</a>--}}
+
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <!-- Modal -->
+                                    <!-- Modal -->
+
+                                @empty
+                                    <tr class="text-center text-danger">
+                                        <td colspan="7">No Data Found</td>
+                                    </tr>
+
+
+
+                                @endforelse
 
 
                                 </tbody>
@@ -100,7 +174,7 @@
 
 
 
-                      <form action="{{ url('add/product/insert') }}" method="post">
+                      <form action="{{ url('add/product/insert') }}" method="post" enctype="multipart/form-data">
                           @csrf
                           <div class="form-group">
                               <label>Product Name</label>
@@ -125,6 +199,11 @@
                           <div class="form-group">
                               <label>Alert Quantity</label>
                               <input type="text" class="form-control"   placeholder="Enter your product alert" name="alert_quantity" value="{{ old('alert_quantity') }}">
+                          </div>
+
+                          <div class="form-group">
+                              <label>Product Image</label>
+                              <input type="file" class="form-control"     name="product_image">
                           </div>
 
                           <button type="submit" class="btn btn-primary">Add Product</button>

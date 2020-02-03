@@ -13,6 +13,9 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
@@ -98,9 +101,14 @@
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/realrashid/sweet-alert" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
     </include_path>
   </component>
   <component name="ProjectId" id="1WeUeGOcVpvCI3PuqqMqz3q1e2t" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -109,7 +117,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="G:/demo-1/demo/ecommerce" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -152,7 +160,10 @@
       <workItem from="1580104880992" duration="14029000" />
       <workItem from="1580183972632" duration="20147000" />
       <workItem from="1580270234512" duration="5812000" />
-      <workItem from="1580278966991" duration="14672000" />
+      <workItem from="1580278966991" duration="15271000" />
+      <workItem from="1580358258942" duration="7118000" />
+      <workItem from="1580704112249" duration="10896000" />
+      <workItem from="1580721626640" duration="11776000" />
     </task>
     <servers />
   </component>
@@ -164,17 +175,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580214697133" />
-    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1579666656481">
+    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1580364921283">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1579666656481" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580364921283" />
     <state x="795" y="451" key="NewPhpFileDialog" timestamp="1580280135010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580280135010" />
-    <state x="667" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580278967772">
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580721654539">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580278967772" />
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580721654539" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/product/view.blade.php</url>
+          <line>8</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
