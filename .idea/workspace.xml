@@ -117,7 +117,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="G:/demo-1/demo/ecommerce" />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/eims" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
@@ -164,6 +164,9 @@
       <workItem from="1580358258942" duration="7118000" />
       <workItem from="1580704112249" duration="10896000" />
       <workItem from="1580721626640" duration="11776000" />
+      <workItem from="1580788800215" duration="6746000" />
+      <workItem from="1580875133658" duration="13038000" />
+      <workItem from="1580899601841" duration="3177000" />
     </task>
     <servers />
   </component>
@@ -175,18 +178,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="714" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580214697133" />
-    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1580364921283">
+    <state x="740" y="277" key="FileChooserDialogImpl" timestamp="1580810844477">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580364921283" />
+    <state x="740" y="277" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580810844477" />
     <state x="795" y="451" key="NewPhpFileDialog" timestamp="1580280135010">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="795" y="451" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580280135010" />
-    <state x="667" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580721654539">
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1580899606798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580721654539" />
+    <state x="667" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580899606798" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

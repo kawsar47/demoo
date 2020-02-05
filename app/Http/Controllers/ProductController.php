@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-
-
 use Illuminate\Http\Request;
 use App\Product;
 use Image;
@@ -12,7 +10,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 class ProductController extends Controller
 {
     function addproductview (){
-        $products = product::paginate(3);
+        $products = product::paginate(5);
         $deleted_products = product::onlyTrashed()->get();
        return view('product/view',compact('products','deleted_products'));
 
@@ -43,7 +41,10 @@ class ProductController extends Controller
           $photo_to_upload =$request->product_image;
           $filename =$last_inserted_id.".".$photo_to_upload->getClientOriginalExtension();
 
-          $t = Image::make($photo_to_upload)->resize(15,15)->save(base_path('public/uploads/product_photos'.$filename));
+           Image::make($photo_to_upload)->resize(400,450)->save(base_path('public/uploads/product_photos/'.$filename));
+           product::find($last_inserted_id)->update([
+               'product_image'=>  $filename
+           ]);
 
 
       }

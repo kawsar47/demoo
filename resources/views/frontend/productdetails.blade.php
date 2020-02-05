@@ -3,6 +3,37 @@
 
 
 @section('frontend_content')
+
+    <!-- Header section -->
+    <header class="header-section header-normal">
+        <div class="container-fluid">
+            <!-- logo -->
+            <div class="site-logo">
+                <img src={{ asset('frontend_assets/img/logo.png') }} alt="logo">
+            </div>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="header-right">
+                <a href="cart.html" class="card-bag"><img src="img/icons/bag.png" alt=""><span>2</span></a>
+                <a href="#" class="search"><img src="img/icons/search.png" alt=""></a>
+            </div>
+            <!-- site menu -->
+            <ul class="main-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Woman</a></li>
+                <li><a href="#">Man</a></li>
+                <li><a href="#">LookBook</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Header section end -->
+
+
+
     <!-- Page Info -->
     <div class="page-info-section page-info">
         <div class="container">
@@ -23,7 +54,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <figure>
-                        <img class="product-big-img" src="{{ asset('frontend_assets/img/product/1.jpg') }}" alt="">
+                        <img class="product-big-img" src="{{ asset('/uploads/product_photos') }}/{{$single_product_info->product_image}}" alt="">
                     </figure>
                     <div class="product-thumbs">
                         <div class="product-thumbs-track">
@@ -127,14 +158,14 @@
                     <div class="col-lg-3">
                         <div class="product-item">
                             <figure>
-                                <img src="{{ asset('frontend_assets/img/products/1.jpg') }}" alt="">
+                                <img src="{{ asset('/uploads/product_photos') }}/{{$related_product->product_image}}" alt="">
                                 <div class="pi-meta">
                                     <div class="pi-m-left">
-                                        <img src="{{ asset('frontend_assets/img/icons/eye.png') }}" alt="">
+                                        <img src="{{ asset('/uploads/product_photos') }}/{{$related_product->product_image}}" alt="">
                                         <p>quick view</p>
                                      </div>
                                     <div class="pi-m-right">
-                                        <img src="{{ asset('frontend_assets/img/icons/heart.png') }}" alt="">
+                                        <img src="{{ asset('/uploads/product_photos') }}/{{$related_product->product_image}}" alt="">
                                         <p>save</p>
                                     </div>
                                 </div>

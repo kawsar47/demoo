@@ -30,6 +30,7 @@
                                     <th>Product Price</th>
                                     <th>Product Quantity</th>
                                     <th>Alert  Quantity</th>
+                                    <th>Product Image</th>
                                     <th colspan="2">Action</th>
                                 </tr>
                                 </thead>
@@ -43,6 +44,9 @@
                                        <td>{{ $product->product_price }}</td>
                                        <td>{{ $product->product_quantity }}</td>
                                        <td>{{ $product->alert_quantity }}</td>
+                                       <td>
+                                           <img src="{{ asset('/uploads/product_photos') }}/{{$product->product_image}}" alt="not found" width="50">
+                                       </td>
                                        <td>
                                            <div class="btn-group" role="group">
 
